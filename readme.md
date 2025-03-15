@@ -22,6 +22,7 @@ pip install -r requirements.txt
 ```
 
 ### 3. Make it executable
+#### Linux 
 ```sh
 chmod +x poyo.py
 mv poyo.py ~/.local/bin/poyo
@@ -31,6 +32,21 @@ Ensure `~/.local/bin` is in your `PATH`:
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc  # or `source ~/.zshrc` for zsh users
 ```
+### MacOS
+```sh
+chmod +x poyo.py
+mv poyo.py /usr/local/bin/poyo
+```
+
+### Windows 
+```sh
+python poyo.py
+```
+You can also create a batch file to run the script:
+```bat
+@echo off
+python poyo.py %*
+```  
 
 ## 🛠 Usage
 
