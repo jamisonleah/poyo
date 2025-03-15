@@ -76,6 +76,29 @@ Example:
 poyo delete ll
 ```
 
+### Place Holders and Dynamic Values
+You can use placeholders in your commands to make them more dynamic. Poyo will prompt you to enter values for these placeholders if they are present in the command and users don't provide them while running the alias.
+
+```sh
+poyo add greet "echo 'Hello {name}, welcome to {place}!'"
+
+poyo run greet name=Alice place=Wonderland
+```
+(Executes `echo 'Hello Alice, welcome to Wonderland!'`)
+
+or 
+
+```sh
+poyo run greet
+```
+(Will prompt you to enter values for `{name}` and `{place}`)
+```sh
+Enter value for 'name': Alice
+Enter value for 'place': Wonderland
+```
+(Executes `echo 'Hello Alice, welcome to Wonderland!'`)
+
+
 ## 📌 Phase 2 Enhancements
 Here are some planned improvements for Poyo:
 - **Import/export functionality**: Easily back up and restore aliases.
